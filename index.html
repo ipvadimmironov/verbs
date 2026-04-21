@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Irregular Verbs Game</title>
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: gold;
+    cursor: pointer;
+}
+.box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Игра: Неправильные глаголы</h1>
+    <h2 id="ruWord"></h2>
+
+    <input id="v1" placeholder="V1">
+    <input id="v2" placeholder="V2">
+    <input id="v3" placeholder="V3">
+    <br>
+    <button onclick="check()">Проверить</button>
+
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+    <h3 id="level"></h3>
+
+    <div class="box" id="lootBox">
+        ?? Ты нашёл коробку!  
+        <br>
+        <button onclick="openBox()">Открыть</button>
+    </div>
+</div>
+
+<script>
+const verbs = [
+    {ru:'ударять, попадать', forms:['hit','hit','hit']},
+      {ru:'держать', forms:['hold','held','held']},
+      {ru:'причинять боль', forms:['hurt','hurt','hurt']},
+      {ru:'хранить; продолжать делать', forms:['keep','kept','kept']},
+      {ru:'знать', forms:['know','knew','known']},
+      {ru:'учить(-ся)', forms:['learn','learnt','learnt'], alt:[['learn','learned','learned']]},
+      {ru:'уезжать, покидать', forms:['leave','left','left']},
+      {ru:'позволять', forms:['let','let','let']},
+      {ru:'лежать', forms:['lie','lay','lain']},
+      {ru:'терять', forms:['lose','lost','lost']},
+      {ru:'делать, изготовлять', forms:['make','made','made']},
+      {ru:'иметь в виду', forms:['mean','meant','meant']},
+      {ru:'встречать; знакомиться', forms:['meet','met','met']},
+      {ru:'платить', forms:['pay','paid','paid']},
+      {ru:'доказывать', forms:['prove','proved','proven'], alt:[['prove','proved','proved']]},
+      {ru:'класть, положить', forms:['put','put','put']},
+      {ru:'читать', forms:['read','read','read']}
+];
+
+let score = 0;
+let streak = 0;
+let current;
+
+const levels = [
+    {name:"новичок", min:0},
+    {name:"старатель", min:50},
+    {name:"машина", min:100},
+    {name:"герой", min:200},
+    {name:"пушка-петарда", min:350},
+    {name:"мудрый филин", min:500},
+];
+
+// ===== LOCAL STORAGE LOAD =====
+function loadProgress() {
+    const saved = JSON.parse(localStorage.getItem("verbsGame"));
+    if (saved) {
+        score = saved.score || 0;
+        streak = saved.streak || 0;
+    }
+}
+
+// ===== SAVE =====
+function saveProgress() {
+    localStorage.setItem("verbsGame", JSON.stringify({
+        score,
+        streak
+    }));
+}
+
+function getLevel() {
+    let lvl = levels[0].name;
+    for (let l of levels) {
+        if (score >= l.min) lvl = l.name;
+    }
+    return lvl;
+}
+
+function newWord() {
+    current = verbs[Math.floor(Math.random()*verbs.length)];
+    document.getElementById("ruWord").innerText = current.ru;
+}
+
+function check() {
+    const v1 = document.getElementById("v1").value.trim();
+    const v2 = document.getElementById("v2").value.trim();
+    const v3 = document.getElementById("v3").value.trim();
+
+    if (v1===current.forms[0] && v2===current.forms[1] && v3===current.forms[2]) {
+        score += 10;
+        streak++;
+        document.getElementById("result").innerText = "? Правильно!";
+        
+        // бонус случайный
+        if (Math.random() < 0.2) {
+            score += 20;
+            document.getElementById("result").innerText += " + БОНУС!";
+        }
+
+        // коробка
+        if (Math.random() < 0.15) {
+            document.getElementById("lootBox").style.display = "block";
+        }
+
+    } else {
+        streak = 0;
+        document.getElementById("result").innerText =
+        "? Ошибка: " + current.forms.join(", ");
+    }
+
+    saveProgress();
+    updateUI();
+    newWord();
+
+    document.getElementById("v1").value="";
+    document.getElementById("v2").value="";
+    document.getElementById("v3").value="";
+}
+
+function openBox() {
+    const reward = Math.floor(Math.random()*50)+10;
+    score += reward;
+    document.getElementById("result").innerText =
+    "?? Ты получил +" + reward + " очков!";
+    document.getElementById("lootBox").style.display = "none";
+
+    saveProgress();
+    updateUI();
+}
+
+function updateUI() {
+    document.getElementById("score").innerText = "Очки: " + score;
+    document.getElementById("level").innerText = "Уровень: " + getLevel();
+}
+
+// ===== INIT =====
+loadProgress();
+updateUI();
+newWord();
+</script>
+
+</body>
+</html>
