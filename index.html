@@ -240,10 +240,10 @@
           За правильные ответы получай очки, бонусы и открывай коробку с призом.
         </div>
         <div class="legend">
-          <span class="tag">?? случайные призы</span>
-          <span class="tag">? бонус-комбо</span>
-          <span class="tag">?? уровни мастерства</span>
-          <span class="tag">?? Enter = проверить</span>
+          <span class="tag">🎁 случайные призы</span>
+          <span class="tag">⚡ бонус-комбо</span>
+          <span class="tag">🏆 уровни мастерства</span>
+          <span class="tag">⌨️ Enter = проверить</span>
         </div>
       </section>
       <aside class="panel stats">
@@ -298,11 +298,11 @@
         </section>
 
         <section class="panel prize-list">
-          <div class="prize-item"><span>?? Малый приз</span><strong>+20</strong></div>
-          <div class="prize-item"><span>?? Кристалл</span><strong>+35</strong></div>
-          <div class="prize-item"><span>?? Ракета</span><strong>+45</strong></div>
-          <div class="prize-item"><span>?? Корона</span><strong>+60</strong></div>
-          <div class="prize-item"><span>? Суперзвезда</span><strong>+80</strong></div>
+          <div class="prize-item"><span>🎁 Малый приз</span><strong>+20</strong></div>
+          <div class="prize-item"><span>💎 Кристалл</span><strong>+35</strong></div>
+          <div class="prize-item"><span>🚀 Ракета</span><strong>+45</strong></div>
+          <div class="prize-item"><span>👑 Корона</span><strong>+60</strong></div>
+          <div class="prize-item"><span>⭐ Суперзвезда</span><strong>+80</strong></div>
           <div class="tiny" style="margin-top:12px;">Коробка может появиться случайно после удачного ответа.</div>
         </section>
       </aside>
@@ -311,7 +311,7 @@
 
   <div class="modal" id="modal">
     <div class="modal-card">
-      <div class="prize-emoji" id="prizeEmoji">??</div>
+      <div class="prize-emoji" id="prizeEmoji">🎁</div>
       <h2 id="prizeTitle" style="margin:0 0 10px;">Ты открыл коробку!</h2>
       <div id="prizeText" class="subtitle" style="max-width:none;">Получено: +20 очков</div>
       <div style="margin-top:18px;"><button class="primary" id="closeModalBtn">Круто!</button></div>
@@ -349,11 +349,11 @@
     ];
 
     const prizes = [
-      {emoji:'??', title:'Малый приз', points:20, text:'Небольшой, но приятный подарок.'},
-      {emoji:'??', title:'Кристалл', points:35, text:'Сияющий бонус к твоему прогрессу.'},
-      {emoji:'??', title:'Ракета', points:45, text:'Ускорение к новому уровню.'},
-      {emoji:'??', title:'Корона', points:60, text:'Королевская награда за усердие.'},
-      {emoji:'?', title:'Суперзвезда', points:80, text:'Редкий звёздный подарок!'}
+      {emoji:'🎁', title:'Малый приз', points:20, text:'Небольшой, но приятный подарок.'},
+      {emoji:'💎', title:'Кристалл', points:35, text:'Сияющий бонус к твоему прогрессу.'},
+      {emoji:'🚀', title:'Ракета', points:45, text:'Ускорение к новому уровню.'},
+      {emoji:'👑', title:'Корона', points:60, text:'Королевская награда за усердие.'},
+      {emoji:'⭐', title:'Суперзвезда', points:80, text:'Редкий звёздный подарок!'}
     ];
 
     const el = id => document.getElementById(id);
@@ -427,7 +427,7 @@
       state.lastIndex = -1;
       updateUI();
       chooseNewVerb();
-      setFeedback('?? Прогресс сброшен. Начинаем заново!', 'bonus');
+      setFeedback('🧹 Прогресс сброшен. Начинаем заново!', 'bonus');
     }
 
     function randomVerb(){
@@ -499,7 +499,7 @@
       if (roll < 0.14){
         const bonus = 10 + Math.floor(Math.random() * 16);
         addScore(bonus);
-        setFeedback(`? Случайный бонус! <b>+${bonus}</b> очков сверху.`, 'bonus');
+        setFeedback(`⚡ Случайный бонус! <b>+${bonus}</b> очков сверху.`, 'bonus');
         popConfetti(18);
       }
       if (!state.chestReady && Math.random() < 0.28){
@@ -507,7 +507,7 @@
         updateUI();
         saveProgress();
         setTimeout(() => {
-          if (state.chestReady) setFeedback('?? Появилась коробка с призом. Можно открыть!', 'bonus');
+          if (state.chestReady) setFeedback('🎁 Появилась коробка с призом. Можно открыть!', 'bonus');
         }, 350);
       }
     }
@@ -528,14 +528,14 @@
         state.correct += 1;
         state.streak += 1;
         addScore(points);
-        setFeedback(`? Верно! <b>${state.current.forms.join(' — ')}</b>. Получено <b>+${points}</b> очков.`, 'good');
+        setFeedback(`✅ Верно! <b>${state.current.forms.join(' — ')}</b>. Получено <b>+${points}</b> очков.`, 'good');
         popConfetti(24);
         triggerBonus();
         setTimeout(chooseNewVerb, 700);
       } else {
         state.streak = 0;
         addScore(-5);
-        setFeedback(`? Неверно. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-5</b> очков.`, 'bad');
+        setFeedback(`❌ Неверно. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-5</b> очков.`, 'bad');
         updateUI();
         gameCard.classList.remove('shake'); void gameCard.offsetWidth; gameCard.classList.add('shake');
         setTimeout(chooseNewVerb, 1200);
@@ -545,7 +545,7 @@
     function skipVerb(){
       state.streak = 0;
       addScore(-3);
-      setFeedback(`?? Пропуск. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-3</b> очка.`, 'bad');
+      setFeedback(`⏭️ Пропуск. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-3</b> очка.`, 'bad');
       setTimeout(chooseNewVerb, 900);
     }
 
@@ -559,7 +559,7 @@
       el('f1').value = a[0];
       el('f2').value = b[0];
       el('f3').value = c[0];
-      setFeedback(`?? Подсказка: первые буквы — <b>${a[0]}, ${b[0]}, ${c[0]}</b>. За верный ответ будет меньше очков.`, 'bonus');
+      setFeedback(`💡 Подсказка: первые буквы — <b>${a[0]}, ${b[0]}, ${c[0]}</b>. За верный ответ будет меньше очков.`, 'bonus');
     }
 
     function openChest(){
@@ -634,7 +634,7 @@
     chooseNewVerb();
     updateUI();
     if (state.score || state.correct || state.boxes) {
-      setFeedback('?? Прогресс загружен из localStorage. Можно продолжать!', 'bonus');
+      setFeedback('💾 Прогресс загружен из localStorage. Можно продолжать!', 'bonus');
     }
   </script>
 </body>
