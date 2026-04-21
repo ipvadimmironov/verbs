@@ -49,10 +49,7 @@
       animation:float 16s linear infinite;
       opacity:.4;
     }
-    @keyframes float {
-      from { transform:translateY(110vh) scale(.6); }
-      to { transform:translateY(-10vh) scale(1.2); }
-    }
+ 
 
     .topbar{
       display:grid;
@@ -145,8 +142,7 @@
       content:""; position:absolute; inset:0; background:linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
       transform:translateX(-100%); animation:shine 2.4s infinite;
     }
-    @keyframes shine { to { transform:translateX(100%); } }
-
+  
     .side{ display:grid; gap:18px; }
     .chest{
       position:relative; min-height:240px; display:flex; align-items:center; justify-content:center; padding:24px;
@@ -185,13 +181,6 @@
     .chest.ready .glow{ opacity:1; }
     .chest.open .glow{ opacity:1; transform:scale(1.2); }
 
-    @keyframes openLid { from{ transform:rotate(0deg)} to{ transform:rotate(-40deg) translateY(-4px);} }
-    @keyframes idle { 50%{ transform:translateY(-6px);} }
-    @keyframes pulse {
-      0%,100%{ transform:scale(1) translateY(0); }
-      50%{ transform:scale(1.04) translateY(-6px); }
-    }
-
     .prize-list{ padding:20px; }
     .prize-item{ display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.1); color:var(--muted); }
     .prize-item strong{ color:white; }
@@ -209,14 +198,7 @@
       border-radius:28px; box-shadow:var(--shadow);
       animation:pop .2s ease-out;
     }
-    @keyframes pop { from{ transform:scale(.96); opacity:.5 } to{ transform:scale(1); opacity:1 } }
-    .prize-emoji{ font-size:64px; margin-bottom:8px; }
-    .shake{ animation:shake .32s; }
-    @keyframes shake {
-      0%,100%{ transform:translateX(0); }
-      25%{ transform:translateX(-6px); }
-      75%{ transform:translateX(6px); }
-    }
+  
 
     .legend{ margin-top:10px; display:flex; flex-wrap:wrap; gap:8px; }
     .tag{ padding:8px 10px; border-radius:999px; background:rgba(255,255,255,.07); border:1px solid var(--line); font-size:13px; color:var(--muted); }
