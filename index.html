@@ -236,23 +236,23 @@
       <section class="panel hero">
         <h1>Irregular Verbs Quest</h1>
         <div class="subtitle">
-          Видишь русское значение — впиши <b>3 формы</b> английского неправильного глагола.
-          За правильные ответы получай очки, бонусы и открывай коробку с призом.
+          Р’РёРґРёС€СЊ СЂСѓСЃСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ вЂ” РІРїРёС€Рё <b>3 С„РѕСЂРјС‹</b> Р°РЅРіР»РёР№СЃРєРѕРіРѕ РЅРµРїСЂР°РІРёР»СЊРЅРѕРіРѕ РіР»Р°РіРѕР»Р°.
+          Р—Р° РїСЂР°РІРёР»СЊРЅС‹Рµ РѕС‚РІРµС‚С‹ РїРѕР»СѓС‡Р°Р№ РѕС‡РєРё, Р±РѕРЅСѓСЃС‹ Рё РѕС‚РєСЂС‹РІР°Р№ РєРѕСЂРѕР±РєСѓ СЃ РїСЂРёР·РѕРј.
         </div>
         <div class="legend">
-          <span class="tag">?? случайные призы</span>
-          <span class="tag">? бонус-комбо</span>
-          <span class="tag">?? уровни мастерства</span>
-          <span class="tag">?? Enter = проверить</span>
+          <span class="tag">?? СЃР»СѓС‡Р°Р№РЅС‹Рµ РїСЂРёР·С‹</span>
+          <span class="tag">? Р±РѕРЅСѓСЃ-РєРѕРјР±Рѕ</span>
+          <span class="tag">?? СѓСЂРѕРІРЅРё РјР°СЃС‚РµСЂСЃС‚РІР°</span>
+          <span class="tag">?? Enter = РїСЂРѕРІРµСЂРёС‚СЊ</span>
         </div>
       </section>
       <aside class="panel stats">
-        <div class="level-badge" id="levelBadge">Уровень: Новичок</div>
+        <div class="level-badge" id="levelBadge">РЈСЂРѕРІРµРЅСЊ: РќРѕРІРёС‡РѕРє</div>
         <div class="statgrid">
-          <div class="stat"><div class="label">Очки</div><div class="value" id="score">0</div></div>
-          <div class="stat"><div class="label">Серия</div><div class="value" id="streak">0</div></div>
-          <div class="stat"><div class="label">Правильно</div><div class="value" id="correct">0</div></div>
-          <div class="stat"><div class="label">Коробки</div><div class="value" id="boxes">0</div></div>
+          <div class="stat"><div class="label">РћС‡РєРё</div><div class="value" id="score">0</div></div>
+          <div class="stat"><div class="label">РЎРµСЂРёСЏ</div><div class="value" id="streak">0</div></div>
+          <div class="stat"><div class="label">РџСЂР°РІРёР»СЊРЅРѕ</div><div class="value" id="correct">0</div></div>
+          <div class="stat"><div class="label">РљРѕСЂРѕР±РєРё</div><div class="value" id="boxes">0</div></div>
         </div>
       </aside>
     </div>
@@ -260,28 +260,28 @@
     <div class="game">
       <section class="panel card" id="gameCard">
         <div class="translation">
-          <small>Русское значение</small>
-          <div class="word" id="translationWord">держать</div>
+          <small>Р СѓСЃСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ</small>
+          <div class="word" id="translationWord">РґРµСЂР¶Р°С‚СЊ</div>
         </div>
 
         <div class="inputs">
-          <input id="f1" placeholder="1-я форма (V1)" autocomplete="off" />
-          <input id="f2" placeholder="2-я форма (V2)" autocomplete="off" />
-          <input id="f3" placeholder="3-я форма (V3)" autocomplete="off" />
+          <input id="f1" placeholder="1-СЏ С„РѕСЂРјР° (V1)" autocomplete="off" />
+          <input id="f2" placeholder="2-СЏ С„РѕСЂРјР° (V2)" autocomplete="off" />
+          <input id="f3" placeholder="3-СЏ С„РѕСЂРјР° (V3)" autocomplete="off" />
         </div>
 
         <div class="actions">
-          <button class="primary" id="checkBtn">Проверить</button>
-          <button class="secondary" id="skipBtn">Пропустить</button>
-          <button class="secondary" id="hintBtn">Подсказка (-8)</button>
-          <button class="gold" id="openChestBtn" disabled>Открыть коробку</button>
-          <button class="secondary" id="resetBtn">Сбросить прогресс</button>
+          <button class="primary" id="checkBtn">РџСЂРѕРІРµСЂРёС‚СЊ</button>
+          <button class="secondary" id="skipBtn">РџСЂРѕРїСѓСЃС‚РёС‚СЊ</button>
+          <button class="secondary" id="hintBtn">РџРѕРґСЃРєР°Р·РєР° (-8)</button>
+          <button class="gold" id="openChestBtn" disabled>РћС‚РєСЂС‹С‚СЊ РєРѕСЂРѕР±РєСѓ</button>
+          <button class="secondary" id="resetBtn">РЎР±СЂРѕСЃРёС‚СЊ РїСЂРѕРіСЂРµСЃСЃ</button>
         </div>
 
-        <div class="feedback" id="feedback">Начни игру — введи три формы и нажми Enter.</div>
+        <div class="feedback" id="feedback">РќР°С‡РЅРё РёРіСЂСѓ вЂ” РІРІРµРґРё С‚СЂРё С„РѕСЂРјС‹ Рё РЅР°Р¶РјРё Enter.</div>
 
         <div class="progress">
-          <div class="tiny" id="progressText">До следующего уровня: 60 очков</div>
+          <div class="tiny" id="progressText">Р”Рѕ СЃР»РµРґСѓСЋС‰РµРіРѕ СѓСЂРѕРІРЅСЏ: 60 РѕС‡РєРѕРІ</div>
           <div class="bar"><div class="fill" id="progressFill"></div></div>
         </div>
       </section>
@@ -298,12 +298,12 @@
         </section>
 
         <section class="panel prize-list">
-          <div class="prize-item"><span>?? Малый приз</span><strong>+20</strong></div>
-          <div class="prize-item"><span>?? Кристалл</span><strong>+35</strong></div>
-          <div class="prize-item"><span>?? Ракета</span><strong>+45</strong></div>
-          <div class="prize-item"><span>?? Корона</span><strong>+60</strong></div>
-          <div class="prize-item"><span>? Суперзвезда</span><strong>+80</strong></div>
-          <div class="tiny" style="margin-top:12px;">Коробка может появиться случайно после удачного ответа.</div>
+          <div class="prize-item"><span>?? РњР°Р»С‹Р№ РїСЂРёР·</span><strong>+20</strong></div>
+          <div class="prize-item"><span>?? РљСЂРёСЃС‚Р°Р»Р»</span><strong>+35</strong></div>
+          <div class="prize-item"><span>?? Р Р°РєРµС‚Р°</span><strong>+45</strong></div>
+          <div class="prize-item"><span>?? РљРѕСЂРѕРЅР°</span><strong>+60</strong></div>
+          <div class="prize-item"><span>? РЎСѓРїРµСЂР·РІРµР·РґР°</span><strong>+80</strong></div>
+          <div class="tiny" style="margin-top:12px;">РљРѕСЂРѕР±РєР° РјРѕР¶РµС‚ РїРѕСЏРІРёС‚СЊСЃСЏ СЃР»СѓС‡Р°Р№РЅРѕ РїРѕСЃР»Рµ СѓРґР°С‡РЅРѕРіРѕ РѕС‚РІРµС‚Р°.</div>
         </section>
       </aside>
     </div>
@@ -312,48 +312,48 @@
   <div class="modal" id="modal">
     <div class="modal-card">
       <div class="prize-emoji" id="prizeEmoji">??</div>
-      <h2 id="prizeTitle" style="margin:0 0 10px;">Ты открыл коробку!</h2>
-      <div id="prizeText" class="subtitle" style="max-width:none;">Получено: +20 очков</div>
-      <div style="margin-top:18px;"><button class="primary" id="closeModalBtn">Круто!</button></div>
+      <h2 id="prizeTitle" style="margin:0 0 10px;">РўС‹ РѕС‚РєСЂС‹Р» РєРѕСЂРѕР±РєСѓ!</h2>
+      <div id="prizeText" class="subtitle" style="max-width:none;">РџРѕР»СѓС‡РµРЅРѕ: +20 РѕС‡РєРѕРІ</div>
+      <div style="margin-top:18px;"><button class="primary" id="closeModalBtn">РљСЂСѓС‚Рѕ!</button></div>
     </div>
   </div>
 
   <script>
     const verbs = [
-      {ru:'ударять, попадать', forms:['hit','hit','hit']},
-      {ru:'держать', forms:['hold','held','held']},
-      {ru:'причинять боль', forms:['hurt','hurt','hurt']},
-      {ru:'хранить; продолжать делать', forms:['keep','kept','kept']},
-      {ru:'знать', forms:['know','knew','known']},
-      {ru:'учить(-ся)', forms:['learn','learnt','learnt'], alt:[['learn','learned','learned']]},
-      {ru:'уезжать, покидать', forms:['leave','left','left']},
-      {ru:'позволять', forms:['let','let','let']},
-      {ru:'лежать', forms:['lie','lay','lain']},
-      {ru:'терять', forms:['lose','lost','lost']},
-      {ru:'делать, изготовлять', forms:['make','made','made']},
-      {ru:'иметь в виду', forms:['mean','meant','meant']},
-      {ru:'встречать; знакомиться', forms:['meet','met','met']},
-      {ru:'платить', forms:['pay','paid','paid']},
-      {ru:'доказывать', forms:['prove','proved','proven'], alt:[['prove','proved','proved']]},
-      {ru:'класть, положить', forms:['put','put','put']},
-      {ru:'читать', forms:['read','read','read']}
+      {ru:'СѓРґР°СЂСЏС‚СЊ, РїРѕРїР°РґР°С‚СЊ', forms:['hit','hit','hit']},
+      {ru:'РґРµСЂР¶Р°С‚СЊ', forms:['hold','held','held']},
+      {ru:'РїСЂРёС‡РёРЅСЏС‚СЊ Р±РѕР»СЊ', forms:['hurt','hurt','hurt']},
+      {ru:'С…СЂР°РЅРёС‚СЊ; РїСЂРѕРґРѕР»Р¶Р°С‚СЊ РґРµР»Р°С‚СЊ', forms:['keep','kept','kept']},
+      {ru:'Р·РЅР°С‚СЊ', forms:['know','knew','known']},
+      {ru:'СѓС‡РёС‚СЊ(-СЃСЏ)', forms:['learn','learnt','learnt'], alt:[['learn','learned','learned']]},
+      {ru:'СѓРµР·Р¶Р°С‚СЊ, РїРѕРєРёРґР°С‚СЊ', forms:['leave','left','left']},
+      {ru:'РїРѕР·РІРѕР»СЏС‚СЊ', forms:['let','let','let']},
+      {ru:'Р»РµР¶Р°С‚СЊ', forms:['lie','lay','lain']},
+      {ru:'С‚РµСЂСЏС‚СЊ', forms:['lose','lost','lost']},
+      {ru:'РґРµР»Р°С‚СЊ, РёР·РіРѕС‚РѕРІР»СЏС‚СЊ', forms:['make','made','made']},
+      {ru:'РёРјРµС‚СЊ РІ РІРёРґСѓ', forms:['mean','meant','meant']},
+      {ru:'РІСЃС‚СЂРµС‡Р°С‚СЊ; Р·РЅР°РєРѕРјРёС‚СЊСЃСЏ', forms:['meet','met','met']},
+      {ru:'РїР»Р°С‚РёС‚СЊ', forms:['pay','paid','paid']},
+      {ru:'РґРѕРєР°Р·С‹РІР°С‚СЊ', forms:['prove','proved','proven'], alt:[['prove','proved','proved']]},
+      {ru:'РєР»Р°СЃС‚СЊ, РїРѕР»РѕР¶РёС‚СЊ', forms:['put','put','put']},
+      {ru:'С‡РёС‚Р°С‚СЊ', forms:['read','read','read']}
     ];
 
     const levels = [
-      {name:'Новичок', min:0},
-      {name:'Старатель', min:60},
-      {name:'Машина', min:140},
-      {name:'Герой', min:240},
-      {name:'Пушка-петарда', min:360},
-      {name:'Мудрый филин', min:520}
+      {name:'РќРѕРІРёС‡РѕРє', min:0},
+      {name:'РЎС‚Р°СЂР°С‚РµР»СЊ', min:60},
+      {name:'РњР°С€РёРЅР°', min:140},
+      {name:'Р“РµСЂРѕР№', min:240},
+      {name:'РџСѓС€РєР°-РїРµС‚Р°СЂРґР°', min:360},
+      {name:'РњСѓРґСЂС‹Р№ С„РёР»РёРЅ', min:520}
     ];
 
     const prizes = [
-      {emoji:'??', title:'Малый приз', points:20, text:'Небольшой, но приятный подарок.'},
-      {emoji:'??', title:'Кристалл', points:35, text:'Сияющий бонус к твоему прогрессу.'},
-      {emoji:'??', title:'Ракета', points:45, text:'Ускорение к новому уровню.'},
-      {emoji:'??', title:'Корона', points:60, text:'Королевская награда за усердие.'},
-      {emoji:'?', title:'Суперзвезда', points:80, text:'Редкий звёздный подарок!'}
+      {emoji:'??', title:'РњР°Р»С‹Р№ РїСЂРёР·', points:20, text:'РќРµР±РѕР»СЊС€РѕР№, РЅРѕ РїСЂРёСЏС‚РЅС‹Р№ РїРѕРґР°СЂРѕРє.'},
+      {emoji:'??', title:'РљСЂРёСЃС‚Р°Р»Р»', points:35, text:'РЎРёСЏСЋС‰РёР№ Р±РѕРЅСѓСЃ Рє С‚РІРѕРµРјСѓ РїСЂРѕРіСЂРµСЃСЃСѓ.'},
+      {emoji:'??', title:'Р Р°РєРµС‚Р°', points:45, text:'РЈСЃРєРѕСЂРµРЅРёРµ Рє РЅРѕРІРѕРјСѓ СѓСЂРѕРІРЅСЋ.'},
+      {emoji:'??', title:'РљРѕСЂРѕРЅР°', points:60, text:'РљРѕСЂРѕР»РµРІСЃРєР°СЏ РЅР°РіСЂР°РґР° Р·Р° СѓСЃРµСЂРґРёРµ.'},
+      {emoji:'?', title:'РЎСѓРїРµСЂР·РІРµР·РґР°', points:80, text:'Р РµРґРєРёР№ Р·РІС‘Р·РґРЅС‹Р№ РїРѕРґР°СЂРѕРє!'}
     ];
 
     const el = id => document.getElementById(id);
@@ -411,7 +411,7 @@
         state.chestReady = Boolean(data.chestReady);
         state.lastIndex = Number.isInteger(data.lastIndex) ? data.lastIndex : -1;
       } catch (e) {
-        console.warn('Не удалось загрузить сохранение:', e);
+        console.warn('РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ:', e);
       }
     }
 
@@ -427,7 +427,7 @@
       state.lastIndex = -1;
       updateUI();
       chooseNewVerb();
-      setFeedback('?? Прогресс сброшен. Начинаем заново!', 'bonus');
+      setFeedback('?? РџСЂРѕРіСЂРµСЃСЃ СЃР±СЂРѕС€РµРЅ. РќР°С‡РёРЅР°РµРј Р·Р°РЅРѕРІРѕ!', 'bonus');
     }
 
     function randomVerb(){
@@ -479,16 +479,16 @@
       correctEl.textContent = state.correct;
       boxesEl.textContent = state.boxes;
       const {current, next} = levelInfo();
-      levelBadge.textContent = 'Уровень: ' + current.name;
+      levelBadge.textContent = 'РЈСЂРѕРІРµРЅСЊ: ' + current.name;
       if (next){
         const span = next.min - current.min;
         const inside = state.score - current.min;
         const pct = Math.max(0, Math.min(100, (inside / span) * 100));
         progressFill.style.width = pct + '%';
-        progressText.textContent = `До уровня «${next.name}»: ${next.min - state.score} очков`;
+        progressText.textContent = `Р”Рѕ СѓСЂРѕРІРЅСЏ В«${next.name}В»: ${next.min - state.score} РѕС‡РєРѕРІ`;
       } else {
         progressFill.style.width = '100%';
-        progressText.textContent = 'Максимальный уровень достигнут!';
+        progressText.textContent = 'РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РґРѕСЃС‚РёРіРЅСѓС‚!';
       }
       chestSection.classList.toggle('ready', state.chestReady);
       openChestBtn.disabled = !state.chestReady;
@@ -499,7 +499,7 @@
       if (roll < 0.14){
         const bonus = 10 + Math.floor(Math.random() * 16);
         addScore(bonus);
-        setFeedback(`? Случайный бонус! <b>+${bonus}</b> очков сверху.`, 'bonus');
+        setFeedback(`? РЎР»СѓС‡Р°Р№РЅС‹Р№ Р±РѕРЅСѓСЃ! <b>+${bonus}</b> РѕС‡РєРѕРІ СЃРІРµСЂС…Сѓ.`, 'bonus');
         popConfetti(18);
       }
       if (!state.chestReady && Math.random() < 0.28){
@@ -507,7 +507,7 @@
         updateUI();
         saveProgress();
         setTimeout(() => {
-          if (state.chestReady) setFeedback('?? Появилась коробка с призом. Можно открыть!', 'bonus');
+          if (state.chestReady) setFeedback('?? РџРѕСЏРІРёР»Р°СЃСЊ РєРѕСЂРѕР±РєР° СЃ РїСЂРёР·РѕРј. РњРѕР¶РЅРѕ РѕС‚РєСЂС‹С‚СЊ!', 'bonus');
         }, 350);
       }
     }
@@ -515,7 +515,7 @@
     function checkAnswer(){
       const inputForms = [el('f1').value, el('f2').value, el('f3').value];
       if (inputForms.some(v => !v.trim())){
-        setFeedback('Заполни все три формы.', 'bad');
+        setFeedback('Р—Р°РїРѕР»РЅРё РІСЃРµ С‚СЂРё С„РѕСЂРјС‹.', 'bad');
         gameCard.classList.remove('shake'); void gameCard.offsetWidth; gameCard.classList.add('shake');
         return;
       }
@@ -528,14 +528,14 @@
         state.correct += 1;
         state.streak += 1;
         addScore(points);
-        setFeedback(`? Верно! <b>${state.current.forms.join(' — ')}</b>. Получено <b>+${points}</b> очков.`, 'good');
+        setFeedback(`? Р’РµСЂРЅРѕ! <b>${state.current.forms.join(' вЂ” ')}</b>. РџРѕР»СѓС‡РµРЅРѕ <b>+${points}</b> РѕС‡РєРѕРІ.`, 'good');
         popConfetti(24);
         triggerBonus();
         setTimeout(chooseNewVerb, 700);
       } else {
         state.streak = 0;
         addScore(-5);
-        setFeedback(`? Неверно. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-5</b> очков.`, 'bad');
+        setFeedback(`? РќРµРІРµСЂРЅРѕ. РџСЂР°РІРёР»СЊРЅС‹Р№ РѕС‚РІРµС‚: <b>${state.current.forms.join(' вЂ” ')}</b>. РЁС‚СЂР°С„ <b>-5</b> РѕС‡РєРѕРІ.`, 'bad');
         updateUI();
         gameCard.classList.remove('shake'); void gameCard.offsetWidth; gameCard.classList.add('shake');
         setTimeout(chooseNewVerb, 1200);
@@ -545,13 +545,13 @@
     function skipVerb(){
       state.streak = 0;
       addScore(-3);
-      setFeedback(`?? Пропуск. Правильный ответ: <b>${state.current.forms.join(' — ')}</b>. Штраф <b>-3</b> очка.`, 'bad');
+      setFeedback(`?? РџСЂРѕРїСѓСЃРє. РџСЂР°РІРёР»СЊРЅС‹Р№ РѕС‚РІРµС‚: <b>${state.current.forms.join(' вЂ” ')}</b>. РЁС‚СЂР°С„ <b>-3</b> РѕС‡РєР°.`, 'bad');
       setTimeout(chooseNewVerb, 900);
     }
 
     function hint(){
       if (state.hintUsed) {
-        setFeedback('Подсказка уже использована для этого слова.', 'bonus');
+        setFeedback('РџРѕРґСЃРєР°Р·РєР° СѓР¶Рµ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° РґР»СЏ СЌС‚РѕРіРѕ СЃР»РѕРІР°.', 'bonus');
         return;
       }
       state.hintUsed = true;
@@ -559,7 +559,7 @@
       el('f1').value = a[0];
       el('f2').value = b[0];
       el('f3').value = c[0];
-      setFeedback(`?? Подсказка: первые буквы — <b>${a[0]}, ${b[0]}, ${c[0]}</b>. За верный ответ будет меньше очков.`, 'bonus');
+      setFeedback(`?? РџРѕРґСЃРєР°Р·РєР°: РїРµСЂРІС‹Рµ Р±СѓРєРІС‹ вЂ” <b>${a[0]}, ${b[0]}, ${c[0]}</b>. Р—Р° РІРµСЂРЅС‹Р№ РѕС‚РІРµС‚ Р±СѓРґРµС‚ РјРµРЅСЊС€Рµ РѕС‡РєРѕРІ.`, 'bonus');
     }
 
     function openChest(){
@@ -572,8 +572,8 @@
       updateUI();
       saveProgress();
       el('prizeEmoji').textContent = prize.emoji;
-      el('prizeTitle').textContent = 'Твой приз: ' + prize.title;
-      el('prizeText').innerHTML = `${prize.text}<br><br><b>+${prize.points}</b> очков!`;
+      el('prizeTitle').textContent = 'РўРІРѕР№ РїСЂРёР·: ' + prize.title;
+      el('prizeText').innerHTML = `${prize.text}<br><br><b>+${prize.points}</b> РѕС‡РєРѕРІ!`;
       modal.classList.add('show');
       popConfetti(42);
       setTimeout(()=> chestSection.classList.remove('open'), 1000);
@@ -634,7 +634,7 @@
     chooseNewVerb();
     updateUI();
     if (state.score || state.correct || state.boxes) {
-      setFeedback('?? Прогресс загружен из localStorage. Можно продолжать!', 'bonus');
+      setFeedback('?? РџСЂРѕРіСЂРµСЃСЃ Р·Р°РіСЂСѓР¶РµРЅ РёР· localStorage. РњРѕР¶РЅРѕ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ!', 'bonus');
     }
   </script>
 </body>
